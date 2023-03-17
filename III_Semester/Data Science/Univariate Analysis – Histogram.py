@@ -1,0 +1,20 @@
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv("iris.csv")
+fig, axes = plt.subplots(2, 2, figsize=(10,10))
+print(axes[0,0].set_title("Sepal Length"))
+print("\n")
+print(axes[0,0].hist(df['sepal.length'], bins=7))
+print("\n")
+print(axes[0,1].set_title("Sepal Width"))
+print("\n")
+print(axes[0,1].hist(df['sepal.width'], bins=5))
+print("\n")
+print(axes[1,0].set_title("Petal Length"))
+print("\n")
+print(axes[1,0].hist(df['petal.length'], bins=6))
+print("\n")
+print(axes[1,1].set_title("Petal Width"))
+print("\n")
+print(axes[1,1].hist(df['petal.width'], bins=6))
